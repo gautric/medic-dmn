@@ -16,7 +16,7 @@ https://en.wikipedia.org/wiki/Blantyre_coma_scale[The Blantyre coma scale is a m
 
 ## Early Warning Score
 ### Medic part footnote:wp[from wikipedia]
-https://en.wikipedia.org/wiki/Early_warning_score[An early warning score (EWS) is a guide used by medical services to quickly determine the degree of illness of a patient. It is based on the vital signs (respiratory rate, oxygen saturation, temperature, blood pressure, pulse/heart rate, AVPU response).[1] Scores were developed in the late 1990s when studies showed that in-hospital deterioration and cardiac arrest were often preceded by a period of increasing abnormalities in the vital signs.] 
+https://en.wikipedia.org/wiki/Early_warning_score[An early warning score (EWS) is a guide used by medical services to quickly determine the degree of illness of a patient. It is based on the vital signs (respiratory rate, oxygen saturation, temperature, blood pressure, pulse/heart rate, AVPU response). Scores were developed in the late 1990s when studies showed that in-hospital deterioration and cardiac arrest were often preceded by a period of increasing abnormalities in the vital signs.] 
 
 ### Technical
 
