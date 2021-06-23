@@ -1,0 +1,27 @@
+# Medic DMN
+
+CAUTION: This is for sample purpose only, not use it without medical review before in real life.
+
+## Glasgow Coma Scale
+### Medic part footnote:wp[from wikipedia]
+https://en.wikipedia.org/wiki/Glasgow_Coma_Scale[The Glasgow Coma Scale (GCS) is a clinical scale used to reliably measure a person's level of consciousness after a brain injury.]
+
+### Technical
+
+## Blantyre Coma Scale
+### Medic part footnote:wp[from wikipedia]
+https://en.wikipedia.org/wiki/Blantyre_coma_scale[The Blantyre coma scale is a modification of the Pediatric Glasgow Coma Scale, designed to assess malarial coma in children. It was designed by Drs. Terrie Taylor and Malcolm Molyneux in 1987, and named for the Malawian city of Blantyre, site of the Blantyre Malaria Project.]
+
+### Technical
+
+## Early Warning Score
+### Medic part footnote:wp[from wikipedia]
+https://en.wikipedia.org/wiki/Early_warning_score[An early warning score (EWS) is a guide used by medical services to quickly determine the degree of illness of a patient. It is based on the vital signs (respiratory rate, oxygen saturation, temperature, blood pressure, pulse/heart rate, AVPU response).[1] Scores were developed in the late 1990s when studies showed that in-hospital deterioration and cardiac arrest were often preceded by a period of increasing abnormalities in the vital signs.] 
+
+### Technical
+
+## Revised Trauma Score 
+### Medic part footnote:wp[from wikipedia]
+https://en.wikipedia.org/wiki/Revised_Trauma_Score[The Revised Trauma Score (RTS) is a physiologic scoring system, designed for use in based on the initial vital signs of a patient. A lower score indicates a higher severity of injury]
+
+### Technical
