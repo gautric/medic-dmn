@@ -247,7 +247,7 @@
       </dmn:rule>
       <dmn:rule id="_2BA35768-7BC1-4E9C-B6F7-3AEE224C794A">
         <dmn:inputEntry id="_18522F9E-3D1F-4D63-86C8-A4FB8413C07B">
-          <dmn:text>[100 ... 199]</dmn:text>
+          <dmn:text>[100 .. 199]</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_141873C2-2D25-4976-B338-ED993D6F8D43">
           <dmn:text>0</dmn:text>
@@ -258,7 +258,7 @@
       </dmn:rule>
       <dmn:rule id="_0B89346F-D053-4386-8F85-7BD1B6910F2F">
         <dmn:inputEntry id="_B2071956-E49E-401E-A945-D3299BCF7624">
-          <dmn:text>[80 ... 99]</dmn:text>
+          <dmn:text>[80 .. 99]</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_5EE1B8C0-65D3-481B-86D4-6905AC47DFA1">
           <dmn:text>1</dmn:text>
@@ -269,7 +269,7 @@
       </dmn:rule>
       <dmn:rule id="_3E8EF86F-C0A8-423E-8A8D-CF5F8CD99B65">
         <dmn:inputEntry id="_503820C3-6AB4-4BF9-95D1-007341BA0A6A">
-          <dmn:text>[70 ... 79]</dmn:text>
+          <dmn:text>[70 .. 79]</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_CBDE494B-F96A-487B-B23F-148C13AF8377">
           <dmn:text>2</dmn:text>
