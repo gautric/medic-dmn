@@ -1,0 +1,367 @@
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="urn:dmn://g.a.net/revised-trauma-score/1.0" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_D4467045-8F59-4467-835F-F234376DF0A6" name="RevisedTraumaScore" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="urn:dmn://g.a.net/revised-trauma-score/1.0">
+  <dmn:extensionElements/>
+  <dmn:inputData id="_F98D392B-B124-4740-9FA5-27A0D735DBCF" name="Glasgow Coma Scale">
+    <dmn:extensionElements/>
+    <dmn:variable id="_1BD10CA9-2702-489A-A212-33C97207076F" name="Glasgow Coma Scale" typeRef="number"/>
+  </dmn:inputData>
+  <dmn:inputData id="_43DB155A-BC8D-4D27-9D31-9210E13E637D" name="Respiratory Rate">
+    <dmn:extensionElements/>
+    <dmn:variable id="_00BD9041-4084-48CD-9A63-1D0BE373810B" name="Respiratory Rate" typeRef="number"/>
+  </dmn:inputData>
+  <dmn:inputData id="_8D1C2D7C-FDBD-4BA9-A51E-9655409FCDA0" name="Systolic Blood Pressure">
+    <dmn:extensionElements/>
+    <dmn:variable id="_DB2CCF44-F7B7-4611-A2E0-5D730F093146" name="Systolic Blood Pressure" typeRef="number"/>
+  </dmn:inputData>
+  <dmn:decision id="_60DAD218-5A8A-4CA2-B133-206FF4830E08" name="Glasgow Coma Scale Score">
+    <dmn:extensionElements/>
+    <dmn:variable id="_2EF7FE16-E597-4D7B-B204-EEABC9500DCA" name="Glasgow Coma Scale Score" typeRef="number"/>
+    <dmn:informationRequirement id="_B53829D7-C264-4DCE-94CB-D028ADF871DC">
+      <dmn:requiredInput href="#_F98D392B-B124-4740-9FA5-27A0D735DBCF"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_2BB32831-72DA-4231-9699-8161A1320299" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_A941BB7E-29B3-45A3-B251-7CAB5FEE69A3">
+        <dmn:inputExpression id="_9E012FC1-98DE-4FF5-88B7-8A3029ED1E99" typeRef="number">
+          <dmn:text>Glasgow Coma Scale</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_4EADC5CA-BDA1-4AF8-9E5C-940572C4497C"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_0F7D3FDB-220D-4C49-8905-55A883525DB0">
+        <dmn:inputEntry id="_3236F61E-B119-46AB-B82E-711B9CAB91C8">
+          <dmn:text>3</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_7958AC99-F452-46D1-B8E3-0D175F494197">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_A184A641-F7D1-4E82-A70D-DE55F889CFC4">
+        <dmn:inputEntry id="_45272A51-985C-494E-B897-A84E34B5EAF6">
+          <dmn:text>[4 .. 5]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_5D5D7C20-AE36-4C98-8F7D-8AB0144F3EE3">
+          <dmn:text>1</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_F7561C7B-0482-4DA8-AC82-89EE81594CC1">
+        <dmn:inputEntry id="_C351D16A-52B9-4AB4-B79F-322DD9BE7C23">
+          <dmn:text>[6 .. 8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_A909D124-8B84-42DB-89A9-4F4EC27351CD">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_B842F075-4390-4642-ACC3-3A3E96B4F046">
+        <dmn:inputEntry id="_FD737970-5339-4098-8C6C-CFD1D058BC47">
+          <dmn:text>[9 .. 12]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_C3D426AF-5C65-4AF9-BFF5-97697D053ADC">
+          <dmn:text>3</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_48C9D29B-AA90-4FDF-8145-BF927723E176">
+        <dmn:inputEntry id="_B2C8F429-E5A4-458B-B66E-B9CC8D56CC6F">
+          <dmn:text>[13 .. 15]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_1F0B9031-8C3D-48E4-89FB-08C7F35C5FD9">
+          <dmn:text>4</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="_9BF00DCE-47DF-4D94-8C32-0AE344B3D4AF" name="Systolic Blood Pressure Score">
+    <dmn:extensionElements/>
+    <dmn:variable id="_3B4AC085-9307-4FDA-911A-29E7F686B6D2" name="Systolic Blood Pressure Score" typeRef="number"/>
+    <dmn:informationRequirement id="_979BABE7-3C85-43D2-A6CC-D7AA1FF9521A">
+      <dmn:requiredInput href="#_8D1C2D7C-FDBD-4BA9-A51E-9655409FCDA0"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_B718C2BD-FE48-4172-A778-91569AEB5812" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_026FE741-67A8-43D3-875A-5C18ACFD928E">
+        <dmn:inputExpression id="_0915C0D1-DF7C-4168-BCD1-3369F67B669A" typeRef="number">
+          <dmn:text>Systolic Blood Pressure</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_0713ABE6-0C7F-42C8-9CA7-DE805612854E"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_AA4714EE-2EB0-457A-9D64-A79749178915">
+        <dmn:inputEntry id="_F27E6004-5C2C-4EE8-A283-8CDFE51C1B52">
+          <dmn:text>0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_075389E8-683F-451F-B88E-F1547D5D01C8">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_0B99871B-93DD-4905-AFBC-ECD429129761">
+        <dmn:inputEntry id="_CE89718C-DC71-4F58-8ED3-DF97636EA717">
+          <dmn:text>[1 .. 49]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_F6216FE0-7035-4857-86FB-D3A02E320160">
+          <dmn:text>1</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_69EBD668-6C20-4118-B96D-1CDB0D916294">
+        <dmn:inputEntry id="_701BB94B-996D-46B1-AE99-B49AF1ABF215">
+          <dmn:text>[50 .. 75]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_5162B34A-5220-4B13-98DE-B82EF5CC6F2F">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_AF3070A7-4B46-48A2-AA2B-A96E8DEA772A">
+        <dmn:inputEntry id="_23D0BD9A-81BE-4FFE-B1B7-16DC5DEC8ABF">
+          <dmn:text>[76 .. 89]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_FCADFA34-34FC-4774-9B24-C55D56A0572C">
+          <dmn:text>3</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_1FE4B020-0F97-44F3-8EFC-67750275F9FA">
+        <dmn:inputEntry id="_7AEBFEA9-342F-4922-8057-0113619AFD68">
+          <dmn:text>&gt; 89</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_C74A6EDC-62EC-4DF1-868B-62E6DC54A12A">
+          <dmn:text>4</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="_B5D82EA2-53C4-4D66-8968-52372FF954F8" name="Respiratory Rate Score">
+    <dmn:extensionElements>
+      <kie:attachment url="https://en.wikipedia.org/wiki/Blantyre_coma_scale#Best_motor_response" name="BCS"/>
+    </dmn:extensionElements>
+    <dmn:variable id="_A6A89DCE-EE65-45A4-9821-420A0252CE7A" name="Respiratory Rate Score" typeRef="number"/>
+    <dmn:informationRequirement id="_CFFE482E-BA54-41A7-9CA8-05CC942CAB07">
+      <dmn:requiredInput href="#_43DB155A-BC8D-4D27-9D31-9210E13E637D"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_AED600F7-E282-40BC-993F-D925E9F9B549" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_F6B34C04-F6B8-4E9E-BF04-81406F07B71D">
+        <dmn:inputExpression id="_ECBBE0B5-736B-4470-B8EE-9D302C3189C4" typeRef="number">
+          <dmn:text>Respiratory Rate</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_D1649CF1-6A8A-4C9E-BE6C-9F1FC0A01B20"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_675CD7AC-28F7-44C2-B657-C4B69B425068">
+        <dmn:inputEntry id="_4F5284DE-AC1C-4103-9429-49A8E33C0565">
+          <dmn:text>0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_C5B935B0-AEBC-40CB-A74E-CD38DB9C446C">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_95F5C0D4-6AF0-493C-9817-0296B097985B">
+        <dmn:inputEntry id="_15C63539-D574-421A-9357-21B75380FDD1">
+          <dmn:text>[1 .. 5]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_AFCA33CF-7732-455B-AC75-713A7E272A0D">
+          <dmn:text>1</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_4432FB0C-E37F-4046-B839-E497914B7038">
+        <dmn:inputEntry id="_FC64153F-0944-4D93-BDCA-5997AACC8107">
+          <dmn:text>[6 .. 9]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_6733DB2D-8226-499E-861C-E355293D42EE">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_0DBF89E9-0884-4FDF-9D0D-071583814159">
+        <dmn:inputEntry id="_B4B8594C-BCE4-42B9-9CE8-269D09E9CDC8">
+          <dmn:text>[10 .. 29]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_7B980FAC-5C6C-4EE5-997D-0536A3137DA8">
+          <dmn:text>4</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_3C724253-A233-471B-9335-FD57550ED68D">
+        <dmn:inputEntry id="_245EE03C-9079-4217-8B65-9AAA2DD3F3F4">
+          <dmn:text>&gt; 29</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_FA90C221-931F-43C5-ABC1-B8EE984C5B57">
+          <dmn:text>3</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="_BCCC801C-D4B0-4799-9E44-7534E9089AC2" name="Revised Trauma Score">
+    <dmn:extensionElements/>
+    <dmn:variable id="_FBF5CEC2-4331-4F33-90E5-2934890BF54F" name="Revised Trauma Score" typeRef="number"/>
+    <dmn:informationRequirement id="_430FD665-7477-46E5-AB12-F64F33BFF484">
+      <dmn:requiredDecision href="#_9BF00DCE-47DF-4D94-8C32-0AE344B3D4AF"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_EDB13B0A-E77C-4A07-83D8-2183F1E4FFBB">
+      <dmn:requiredDecision href="#_B5D82EA2-53C4-4D66-8968-52372FF954F8"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_7B9E34CB-AE25-41CA-AAED-F0FEC805FA03">
+      <dmn:requiredDecision href="#_60DAD218-5A8A-4CA2-B133-206FF4830E08"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression id="_9C51AED1-511C-4D82-B78E-5A411E3DDD31" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/">
+      <dmn:text>0.9368 * Glasgow Coma Scale Score + 0.7326 * Systolic Blood Pressure Score + 0.2908 * Respiratory Rate Score</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_4257E1F9-3F24-49AA-94B2-E5A1307E8DB5" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_2BB32831-72DA-4231-9699-8161A1320299">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_B718C2BD-FE48-4172-A778-91569AEB5812">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_AED600F7-E282-40BC-993F-D925E9F9B549">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_9C51AED1-511C-4D82-B78E-5A411E3DDD31">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape xmlns:p0="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnshape-drg-_F98D392B-B124-4740-9FA5-27A0D735DBCF" dmnElementRef="p0:_F98D392B-B124-4740-9FA5-27A0D735DBCF" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="145" y="415" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape xmlns:p1="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnshape-drg-_43DB155A-BC8D-4D27-9D31-9210E13E637D" dmnElementRef="p1:_43DB155A-BC8D-4D27-9D31-9210E13E637D" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="453" y="415" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape xmlns:p2="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnshape-drg-_8D1C2D7C-FDBD-4BA9-A51E-9655409FCDA0" dmnElementRef="p2:_8D1C2D7C-FDBD-4BA9-A51E-9655409FCDA0" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="299" y="415" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape xmlns:p3="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnshape-drg-_60DAD218-5A8A-4CA2-B133-206FF4830E08" dmnElementRef="p3:_60DAD218-5A8A-4CA2-B133-206FF4830E08" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="145" y="243" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape xmlns:p4="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnshape-drg-_9BF00DCE-47DF-4D94-8C32-0AE344B3D4AF" dmnElementRef="p4:_9BF00DCE-47DF-4D94-8C32-0AE344B3D4AF" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="300" y="243" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape xmlns:p5="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnshape-drg-_B5D82EA2-53C4-4D66-8968-52372FF954F8" dmnElementRef="p5:_B5D82EA2-53C4-4D66-8968-52372FF954F8" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="454" y="243" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape xmlns:p6="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnshape-drg-_BCCC801C-D4B0-4799-9E44-7534E9089AC2" dmnElementRef="p6:_BCCC801C-D4B0-4799-9E44-7534E9089AC2" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="300" y="61" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge xmlns:p7="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnedge-drg-_B53829D7-C264-4DCE-94CB-D028ADF871DC" dmnElementRef="p7:_B53829D7-C264-4DCE-94CB-D028ADF871DC">
+        <di:waypoint x="195" y="440"/>
+        <di:waypoint x="195" y="293"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge xmlns:p8="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnedge-drg-_979BABE7-3C85-43D2-A6CC-D7AA1FF9521A" dmnElementRef="p8:_979BABE7-3C85-43D2-A6CC-D7AA1FF9521A">
+        <di:waypoint x="349" y="440"/>
+        <di:waypoint x="350" y="293"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge xmlns:p9="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnedge-drg-_CFFE482E-BA54-41A7-9CA8-05CC942CAB07" dmnElementRef="p9:_CFFE482E-BA54-41A7-9CA8-05CC942CAB07">
+        <di:waypoint x="503" y="440"/>
+        <di:waypoint x="504" y="293"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge xmlns:p10="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnedge-drg-_430FD665-7477-46E5-AB12-F64F33BFF484" dmnElementRef="p10:_430FD665-7477-46E5-AB12-F64F33BFF484">
+        <di:waypoint x="350" y="268"/>
+        <di:waypoint x="350" y="111"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge xmlns:p11="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnedge-drg-_EDB13B0A-E77C-4A07-83D8-2183F1E4FFBB" dmnElementRef="p11:_EDB13B0A-E77C-4A07-83D8-2183F1E4FFBB">
+        <di:waypoint x="504" y="268"/>
+        <di:waypoint x="350" y="111"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge xmlns:p12="urn:dmn://g.a.net/blantyre-coma-scale/1.0" id="dmnedge-drg-_7B9E34CB-AE25-41CA-AAED-F0FEC805FA03" dmnElementRef="p12:_7B9E34CB-AE25-41CA-AAED-F0FEC805FA03">
+        <di:waypoint x="195" y="268"/>
+        <di:waypoint x="350" y="111"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+    <dmndi:DMNDiagram id="_2BE7CE6D-29D9-47FD-AD45-6022DCED834B" name="new-diagram">
+      <di:extension>
+        <kie:ComponentsWidthsExtension/>
+      </di:extension>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
